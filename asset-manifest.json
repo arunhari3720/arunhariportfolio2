@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/arunhariportfolio2/static/css/main.6d48aae7.css",
-    "main.js": "/arunhariportfolio2/static/js/main.cbdea4ac.js",
+    "main.css": "/arunhariportfolio2/static/css/main.8ac3fc3a.css",
+    "main.js": "/arunhariportfolio2/static/js/main.cb0c7327.js",
     "static/js/453.1407b060.chunk.js": "/arunhariportfolio2/static/js/453.1407b060.chunk.js",
     "static/media/image.png": "/arunhariportfolio2/static/media/image.a7fbae2bd65978f40521.png",
     "static/media/fontawesome-webfont.svg?v=4.0.3": "/arunhariportfolio2/static/media/fontawesome-webfont.d9b392ddb6b9040c3c66.svg",
@@ -14,12 +14,12 @@
     "static/media/fontawesome-webfont.eot": "/arunhariportfolio2/static/media/fontawesome-webfont.48184c4732af4d6151b7.eot",
     "static/media/poj2.jpg": "/arunhariportfolio2/static/media/poj2.c79363dfc9d5b254c474.jpg",
     "index.html": "/arunhariportfolio2/index.html",
-    "main.6d48aae7.css.map": "/arunhariportfolio2/static/css/main.6d48aae7.css.map",
-    "main.cbdea4ac.js.map": "/arunhariportfolio2/static/js/main.cbdea4ac.js.map",
+    "main.8ac3fc3a.css.map": "/arunhariportfolio2/static/css/main.8ac3fc3a.css.map",
+    "main.cb0c7327.js.map": "/arunhariportfolio2/static/js/main.cb0c7327.js.map",
     "453.1407b060.chunk.js.map": "/arunhariportfolio2/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d48aae7.css",
-    "static/js/main.cbdea4ac.js"
+    "static/css/main.8ac3fc3a.css",
+    "static/js/main.cb0c7327.js"
   ]
 }
