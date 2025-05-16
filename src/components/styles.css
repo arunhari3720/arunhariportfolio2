@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Comforter&family=Gasoek+One&family=Oi&family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gasoek+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('font-awesome/css/font-awesome.min.css');
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color:whitesmoke;
+}
+
+nav {
+    font: 12px 'opensans-bold', sans-serif;
+   width: 100%;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+   margin: 0 auto;
+   z-index: 100;
+   position: fixed;
+   left: 0;
+   top: 0;
+}
+.opaque { background-color: #333; }
+
+
+nav ul {
+    position: relative;
+    list-style: none;
+    height: 48px;
+    display: outline-block;
+}
+
+nav ul li {
+    
+   display: outline-block;
+   padding: 8px 13px;
+   line-height: 32px;
+	text-decoration: none;
+   text-align: left;
+   color: #fff;
+
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+    
+}
+
+nav ul li a {
+    display: inline-block;
+   padding: 8px 13px;
+   line-height: 32px;
+	text-decoration: none;
+   text-align: left;
+   color: #fff;
+
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+nav li a:active { background-color: transparent !important; }
+nav li.current a { color: #F06000; }
+.home {
+    position: relative;
+    height: 800px;
+    min-height: 500px;
+    width: 100%;
+    background: #161415 url('./image/image.png') no-repeat top center;
+    background-size: cover !important;
+     -webkit-background-size: cover !important;
+    text-align: center;
+    overflow: hidden;
+    padding: 150px;
+    
+}
+.letter {
+    font: 100px "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal;
+    display: inline-block;  /* Ensure letters are block elements for individual transformations */
+    opacity: 0;             /* Start invisible */
+    transform: translateY(20px); /* Slide in from below */
+    animation: fadeInUp 1.5s forwards; /* Animation name and duration */
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;          /* Fade in to visible */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+/* Rest of your existing CSS */
+/* vertically center banner section 
+.home:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+ }
+ .home .banner {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    width: 85%;
+    padding-bottom: 30px;
+    text-align : center;
+ }
+ 
+ .home .banner-text { width: 100%; }
+ .home .banner-text h1 {
+    font: 90px/1.1em 'opensans-bold', sans-serif;
+    color: #fff;
+    letter-spacing: -2px;
+    margin: 0 auto 18px auto;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+ }
+  .home.banner-text h3 {
+    font: 18px/1.9em 'librebaskerville-regular', serif;
+    color: #A8A8A8;
+    margin: 0 auto;
+    width: 70%;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+ }
+ .home .banner-text h3 span,
+ .home .banner-text h3 a {
+    color: #fff;
+ }
+ .home .banner-text hr {
+    width: 60%;
+    margin: 18px auto 24px auto;
+    border-color: #2F2D2E;
+    border-color: rgba(150, 150, 150, .1);
+ }*/
+ 
+.projects,.contact{
+    position: relative;
+    height: 800px;
+    min-height: 500px;
+    width: 100%;
+    background:yellowgreen url('./image/image.png') no-repeat top center;
+    background-size: cover !important;
+     -webkit-background-size: cover !important;
+    text-align: center;
+    overflow: hidden;
+    padding: 150px;
+} 
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: black;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+@media(max-width: 768px) {
+    .card {
+        width: 80%;
+    }
+}
+
+form {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+    height: 90%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+form input, form textarea {
+    
+    position: relative;
+            margin: auto;
+            width: 60%;
+            height: 50px;
+            display:flex;
+            outline: outset;
+            border: groove;
+            border: 1.3px solid rgb(255, 255, 255);
+            border-radius: 10px;
+            color: white;
+            padding-left: 20px;
+            background-color: transparent;
+            font-size: medium;
+            position: center;
+            font-family: 'Times New Roman', serif;
+      
+}
+
+form button {
+    margin: auto;
+            margin-top: 20px;
+            width: fit-content;
+            height: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: medium;
+            font-family: "Sigmar", sans-serif;
+            cursor: pointer;
+
+    background-color: #000000;
+    color: white;
+    box-shadow: 1px 1px 120px rgba(255, 255, 255, 0.782);
+    padding: 10px;
+    
+}
+
+form button:hover {
+    background-color: #222;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: inherit; /* match the font size to the list items */
+}
+
+.dropdown-menu {
+    position: absolute; /* Allow dropdown to float over other elements */
+    background-color: #282c34;
+    padding: 10px;
+    z-index: 1000; /* Ensure it's on top */
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column; /* Stack dropdown items vertically */
+    margin-top: 5px; /* Space between the button and the dropdown */
+}
+
+.dropdown-menu li {
+    margin: 5px 0; /* Space between items */
+}
+
+.dropdown-menu a {
+    padding: 5px 10px; /* Add padding for the dropdown items */
+    display: block; /* Make the whole area clickable */
+}
+
+.dropdown-menu a:hover {
+    background-color: #3a3f47; /* Change color on hover */
+}
+
+.app {
+    perspective: 1000px; /* To give the 3D effect */
+}
+
+.page-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height for the flip effect */
+    transition: transform 0.6s;
+    transform-style: preserve-3d; /* Preserve 3D effect */
+}
+
+.page {
+    position: absolute;
+    backface-visibility: hidden; /* Hide backface when not facing front */
+    width: 100%;
+    height: 100%;
+}
+
+.front {
+    background-color: white; /* Front side color */
+}
+
+.back {
+    background-color: #f4f4f4; /* Back side color */
+    transform: rotateY(180deg); /* Rotate back side for flipping effect */
+}
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+/* Add your existing styles: animations, etc. */

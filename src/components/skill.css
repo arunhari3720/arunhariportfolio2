@@ -1,0 +1,54 @@
+.chart-container {
+    display: flex;
+    position: relative;
+     right: 400px;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Adjust according to your needs */
+}
+
+.doughnut-chart {
+  
+    width: 1000px; /* Size of the doughnut */
+    height: 100px; /* Size of the doughnut */
+    border-radius: 50%; /* Make it a circle */
+    background: conic-gradient(
+        #FF6384 0% var(--java-percentage),
+        #36A2EB var(--java-percentage) var(--java-percentage + var(--python-percentage)),
+        #FFCE56 var(--java-percentage + var(--python-percentage)) var(--java-percentage + var(--python-percentage) + var(--html-percentage)),
+        #4BC0C0 var(--java-percentage + var(--python-percentage) + var(--html-percentage)) var(--java-percentage + var(--python-percentage) + var(--html-percentage) + var(--css-percentage)),
+        transparent var(--java-percentage + var(--python-percentage) + var(--html-percentage) + var(--css-percentage)) 100%
+    );
+}
+
+.slice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(50%);
+}
+
+.java {
+    --java-percentage: 40%; /* Define the percentage Java takes up */
+}
+
+.python {
+    --python-percentage: 30%; /* Define the percentage Python takes up */
+}
+
+.html {
+    --html-percentage: 20%; /* Define the percentage HTML takes up */
+}
+
+.css {
+    --css-percentage: 10%; /* Define the percentage CSS takes up */
+}
+
+.skill-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: black; /* Text color */
+}

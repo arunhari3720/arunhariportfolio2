@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', serif,;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.portfolio header {
+  text-align: center;
+  padding: 80px;
+  background-color: yellowgreen;
+  color: white;
+}
+
+h1, h2, h3, p {
+  margin: 10px 0;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
+
+.projects {
+  padding: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color:skyblue;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 30%;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+@media(max-width: 768px) {
+  .card {
+      width: 80%;
+  }
+}

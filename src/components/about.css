@@ -1,0 +1,83 @@
+#about {
+    position: relative;
+    height: 800px;
+    min-height: 500px;
+    width: 100%;
+    text-align: center;
+    background: #161415 url('./image/image.png') no-repeat top center;;
+    overflow: hidden;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    padding: 0px;
+ }
+ 
+ #about a, #about a:visited  { color: #fff; }
+ #about a:hover, #about a:focus { color: #11ABB0; }
+ 
+ #about h2 {
+    font: 22px/30px 'opensans-bold', sans-serif;
+    color: #fff;
+    margin-bottom: 12px;
+ }
+ #about p {
+   font-family: 'Times New Roman', Times, serif;
+   font-size: large;
+    line-height: 45px;
+    color: white;
+ }
+ #about li{
+   font-family: 'Times New Roman', Times, serif;
+   font-size: large;
+   line-height: 45px;
+ }
+ #about.wrapper {
+    padding: 100px;
+  }
+  
+ #about.image--cover {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 100px;
+    object-fit: contain;
+    object-position: unset;
+  }
+ #about .profile-pic {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+ }
+ #about .contact-details {
+   width: 41.66667%;
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto
+      
+     }
+ #about .download {
+    position:relative;
+    object-fit: scale-down;
+    width: 58.33333%;
+    padding-top: 6px;
+ }
+
+ /* About.css or any relevant CSS file */
+education-list {
+   font-family: 'Times New Roman', serif;
+    list-style-type: armenian; /* Removes bullet points */
+    text-align:right;
+    padding-right: 20px;
+    position: inherit;
+    margin-bottom: 50px;
+}
+
+education-list li {
+   font-family: 'Times New Roman', Times, serif;
+    margin: 10px 0; /* Adds spacing between items */
+    text-align: right;
+    padding-right: 20px;
+}
+ 
+ 
+ 
