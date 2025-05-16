@@ -1,0 +1,87 @@
+.contact {
+    max-width: 100%; /* Allow the form to take 100% width of the container */
+    margin: 20px auto; /* Center the form horizontally */
+    padding: 20px; /* Padding around the form */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    color: white; /* Text color */
+    text-align: center; /* Center text in the form */
+    overflow: hidden; /* Prevent content overflow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.contact h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Responsive Form Layout */
+form {
+    display: flex; /* Use flexbox for the form */
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Create space between the form elements */
+}
+input[type="text"],
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Ensure full width */
+    padding: 10px; /* Padding for good touch target area */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for better readability */
+    background-color: rgba(255, 255, 255, 0.2); /* Background color */
+    color: white; /* Text color */
+    box-sizing: border-box; /* Include padding in width */
+    transition: border 0.3s; /* Smooth transition on focus */
+}
+
+/* Add a focus effect to improve accessibility */
+input[type="text"],
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none; /* Remove default outline */
+    border: 2px solid DodgerBlue; /* Highlight border on focus */
+}
+textarea {
+    min-height: 100px; /* Minimum height for textarea */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+button {
+    background-color: DodgerBlue; /* Button color */
+    color: white; /* Text color */
+    padding: 12px 20px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Button font size */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+button:disabled {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background when disabled */
+    cursor: not-allowed; /* Not allowed cursor when disabled */
+}
+
+button:hover:not(:disabled) {
+    background-color: yellowgreen; /* Button hover color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact {
+        padding: 10px; /* Reduce padding on mobile */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 14px; /* Smaller font size on mobile */
+    }
+
+    button {
+        font-size: 14px; /* Adjust button font size for mobile */
+    }
+}
