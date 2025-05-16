@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/arunhariportfolio2/static/css/main.04c65545.css",
+    "main.js": "/arunhariportfolio2/static/js/main.cbdea4ac.js",
+    "static/js/453.1407b060.chunk.js": "/arunhariportfolio2/static/js/453.1407b060.chunk.js",
+    "static/media/image.png": "/arunhariportfolio2/static/media/image.a7fbae2bd65978f40521.png",
+    "static/media/fontawesome-webfont.svg?v=4.0.3": "/arunhariportfolio2/static/media/fontawesome-webfont.d9b392ddb6b9040c3c66.svg",
+    "static/media/poj3.jpg": "/arunhariportfolio2/static/media/poj3.ef3232eedb98cec9abba.jpg",
+    "static/media/poj4.jpg": "/arunhariportfolio2/static/media/poj4.929514d6ef25fb95c4b8.jpg",
+    "static/media/ph.jpg": "/arunhariportfolio2/static/media/ph.1127e04d49d3b8a8e194.jpg",
+    "static/media/fontawesome-webfont.ttf?v=4.0.3": "/arunhariportfolio2/static/media/fontawesome-webfont.39f38361e3563f688a32.ttf",
+    "static/media/sam.jpg": "/arunhariportfolio2/static/media/sam.eb4409b0060e57f0d97f.jpg",
+    "static/media/fontawesome-webfont.woff?v=4.0.3": "/arunhariportfolio2/static/media/fontawesome-webfont.83ebdc9f5008e623f9de.woff",
+    "static/media/fontawesome-webfont.eot": "/arunhariportfolio2/static/media/fontawesome-webfont.48184c4732af4d6151b7.eot",
+    "static/media/poj2.jpg": "/arunhariportfolio2/static/media/poj2.c79363dfc9d5b254c474.jpg",
+    "index.html": "/arunhariportfolio2/index.html",
+    "main.04c65545.css.map": "/arunhariportfolio2/static/css/main.04c65545.css.map",
+    "main.cbdea4ac.js.map": "/arunhariportfolio2/static/js/main.cbdea4ac.js.map",
+    "453.1407b060.chunk.js.map": "/arunhariportfolio2/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04c65545.css",
+    "static/js/main.cbdea4ac.js"
+  ]
+}
