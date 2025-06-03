@@ -155,7 +155,7 @@ button[type='submit']:disabled {
       0 0 18px 6px rgba(80, 201, 206, 0.9),
       0 0 35px 14px rgba(80, 201, 206, 0.5);
   }
-=======
+
 .contact {
     max-width: 100%; /* Allow the form to take 100% width of the container */
     margin: 20px auto; /* Center the form horizontally */
