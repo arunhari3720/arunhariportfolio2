@@ -2,50 +2,71 @@ import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
-// Register the necessary components for chart.js
+// Register Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const SkillsChart = () => {
-    // Define the data for the chart
     const data = {
-
-        
         labels: ['Java', 'Python', 'HTML', 'CSS'],
         datasets: [
             {
                 label: 'My Skills',
-                data: [40, 30, 20, 10], // Percentages for each skill
+                data: [40, 30, 20, 10],
                 backgroundColor: [
                     '#FF6384',
                     '#36A2EB',
                     '#FFCE56',
                     '#4BC0C0',
                 ],
-                hoverOffset: 4,
+                hoverOffset: 8, // a bit larger hover effect
+                borderWidth: 2,
+                borderColor: 'white',
             },
         ],
-    
     };
 
-    <p> hi how are u</p>
-    // Define chart options
     const options = {
         responsive: true,
-         maintainAspectRatio: false, 
+        maintainAspectRatio: false,
+        animation: {
+            animateRotate: true,
+            duration: 2000, // 2 seconds animation
+            easing: 'easeOutBounce',
+        },
         plugins: {
             legend: {
                 position: 'top',
+                labels: {
+                    font: {
+                        size: 14,
+                    },
+                    color: '#333',
+                },
             },
             title: {
                 display: true,
                 text: 'Skill Proficiency',
+                font: {
+                    size: 18,
+                    weight: 'bold',
+                },
+                color: '#222',
             },
         },
     };
 
-    return  <div style={{ position: 'static',bottom:'0',margin: 'auto',left:'0',right:'0',width: '50%', height: '200px' }}> {/* Adjust these sizes */}
+    return (
+        <div
+            style={{
+                margin: '40px auto',
+                width: '300px',
+                height: '300px',
+                position: 'relative',
+            }}
+        >
             <Doughnut data={data} options={options} />
         </div>
+    );
 };
 
 export default SkillsChart;

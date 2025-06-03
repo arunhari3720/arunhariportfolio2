@@ -1,187 +1,195 @@
-header {
-    position: relative;
-    height: 800px;
-    min-height: 500px;
-    width: 100%;
-    background: yellowgreen url(../components/image/image.png) no-repeat top center;
-    background-size: cover !important;
-     -webkit-background-size: cover !important;
-    text-align: center;
-    overflow: hidden;
- }
- 
- /* vertically center banner section */
- header:before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
- }
- header .banner {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 auto;
-    width: 85%;
-    padding-bottom: 30px;
-    text-align : center;
- }
- 
- header .banner-text { width: 100%; }
- header .banner-text h1 {
-    font: 90px/1.1em 'opensans-bold', sans-serif;
-    color: #fff;
-    letter-spacing: -2px;
-    margin: 0 auto 18px auto;
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
- }
- header .banner-text h3 {
-    font: 18px/1.9em 'librebaskerville-regular', serif;
-    color: #A8A8A8;
-    margin: 0 auto;
-    width: 70%;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
- }
- header .banner-text h3 span,
- header .banner-text h3 a {
-    color: #fff;
- }
- header .banner-text hr {
-    width: 60%;
-    margin: 18px auto 24px auto;
-    border-color: #2F2D2E;
-    border-color: rgba(150, 150, 150, .1);
- }
- 
- /* header social links */
- header .social {
-    margin: 24px 0;
-    padding: 0;
-    font-size: 30px;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
- }
- header .social li {
-    display: inline-block;
-    margin: 0 15px;
-    padding: 0;
- }
- header .social li a { color: #fff; }
- header .social li a:hover { color: #11ABB0; }
- 
- /* scrolldown link */
- header .scrolldown a {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    margin-left: -29px;
-    color: #fff;
-    display: block;
-    height: 42px;
-    width: 42px;
-    font-size: 42px;
-    line-height: 42px;
-    color: #fff;
-    border-radius: 100%;
- 
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
- }
- header .scrolldown a:hover { color: #11ABB0; }
- #about {
-   background: #2B2B2B;
-   padding-top: 96px;
-   padding-bottom: 66px;
-   overflow: hidden;
+/* ────────────────────────────────
+   1. RESET / BASE
+   ─────────────────────────────── */
+
+#nav-wrap ul,
+#nav-wrap li,
+#nav-wrap a,
+#nav-wrap button.mobile-btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  appearance: none;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Navigation Reset */
-nav-wrap ul, #nav-wrap li, #nav-wrap a {
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-}
-
-/* nav-wrap */
+/* ────────────────────────────────
+   2. NAVIGATION WRAPPER
+   ─────────────────────────────── */
 #nav-wrap {
-    font-family: 'Playfair Display', serif;
-    background-color:p; /* Dark background for the navigation */
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    margin: 0 auto;
-    z-index: 100;
-    position: fixed; /* Make nav fixed at the top */
-    left: 0;
-    top: 0;
-    transition: background-color 0.5s ease; /* Smooth background transition */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+  font: 12px 'Open Sans', sans-serif;
+  background-color: #333; /* solid background */
+  height: 48px;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  z-index: 1000; /* increased to stay on top */
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-/* Opaque class if needed */
-.opaque {
-    background-color: #333; /* Optional: Same color as the nav */
-}
-
-/* Navigation menu styling */
+/* ────────────────────────────────
+   3. DESKTOP NAVIGATION
+   ─────────────────────────────── */
 ul#nav {
-    min-height: 48px;
-    width: auto;
-    text-align: center; /* Center align the menu */
+  min-height: 48px;
+  text-align: center;
+  background-color: #333; /* always solid bg */
 }
-
-/* Style for list items */
 ul#nav li {
-    position: relative;
-    list-style: none;
-    height: 48px;
-    display: inline-block; /* Inline-block to place items next to each other */
-    margin: 0 15px; /* Add margin for spacing between links */
+  list-style: none;
+  height: 48px;
+  display: inline-block;
 }
-
-/* Link Styling */
 ul#nav li a {
-    color: #fff; /* White text for links */
-    text-decoration: none; /* No underline */
-    font-size: 1.1rem;
-    position: relative;
-    transition: color 0.3s ease; /* Smooth color transition */
+  display: inline-block;
+  padding: 8px 13px;
+  line-height: 32px;
+  color: #fff;
+  transition: color 0.2s ease-in-out;
 }
-
-/* Adding a hover animation for the links */
-ul#nav li a::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0; /* Start from bottom */
-    width: 0;
-    height: 2px; /* Size of the underline */
-    background: #fff; /* Underline color */
-    transition: all 0.4s ease; /* Increase hover transition duration */
-}
-
-/* On hover, expand the underline */
-ul#nav li a:hover::before {
-    width: 100%; /* Full width on hover */
-    left: 0; /* Align to the left */
-}
-
-/* Active Link Styling */
-ul#nav li.current a {
-    color: #FFD700; /* Change color of active link */
-    font-weight: bold; /* Make active link bold */
-}
-
-/* Hover effects */
-ul#nav li:hover {
-    transform: scale(1.1); /* Slightly larger on hover */
-}
-
-ul#nav li:hover a {
-    color: #FFD700; /* Change hover color for link */
-}
-
 ul#nav li a:active {
-    background-color: transparent !important; /* Make sure active state doesn't affect */
-} 
+  background-color: transparent !important;
+}
+ul#nav li.current a {
+  color: #fff;
+}
+
+/* ────────────────────────────────
+   4. HEADER / BANNER
+   ─────────────────────────────── */
+header {
+  position: relative;
+  width: 100%;
+  background: yellowgreen url('../components/image/image.png') no-repeat top center;
+  background-size: cover;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header .banner {
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+header .banner-text h1 {
+  font: 48px 'opensans-bold', sans-serif;
+  color: #fff;
+  margin-bottom: 18px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+header .banner-text h3 {
+  font: 18px 'librebaskerville-regular', serif;
+  color: #A8A8A8;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+header .social {
+  margin: 24px 0;
+  font-size: 30px;
+}
+header .social li {
+  display: inline-block;
+  margin: 0 15px;
+}
+header .scrolldown a {
+  color: #fff;
+  font-size: 42px;
+}
+
+@media (min-width: 768px) {
+  header .banner-text h1 {
+    font-size: 64px;
+  }
+}
+html {
+  scroll-padding-top: 48px;
+}
+
+/* ────────────────────────────────
+   5. MOBILE NAVIGATION (≤ 600px)
+   ─────────────────────────────── */
+@media (max-width: 600px) {
+  /* 5‑A. Hamburger button */
+  #nav-wrap > .mobile-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 22px;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    cursor: pointer;
+    z-index: 120;
+  }
+  #nav-wrap > .mobile-btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* 5‑B. Collapsed list */
+  ul#nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #333; /* solid background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  }
+
+  /* 5‑C. Expanded list */
+  ul#nav.open {
+    display: flex;
+    animation: slideDown 0.35s ease forwards;
+    background-color: #333 !important; /* force solid background */
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* 5‑D. Mobile items */
+  ul#nav li {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  ul#nav li:first-child {
+    border-top: none;
+  }
+  ul#nav li a {
+    width: 100%;
+    padding: 14px 0;
+    text-align: center;
+  }
+
+  /* 5‑E. Hamburger → “X” */
+  .mobile-btn.open span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+  }
+  .mobile-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .mobile-btn.open span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+  }
+}

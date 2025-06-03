@@ -47,6 +47,8 @@ const Projects = () => {
 
     return (
         <div className="projects-container">
+        <br></br>
+        <br></br>
             <h1>My Projects</h1>
             <br></br>
             <br></br>

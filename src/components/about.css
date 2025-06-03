@@ -1,83 +1,114 @@
+/* Glowing animation keyframes */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section container */
 #about {
-    position: relative;
-    height: 800px;
-    min-height: 500px;
-    width: 100%;
-    text-align: center;
-    background: #161415 url('./image/image.png') no-repeat top center;;
-    overflow: hidden;
-    background-size: cover !important;
-    -webkit-background-size: cover !important;
-    padding: 0px;
- }
- 
- #about a, #about a:visited  { color: #fff; }
- #about a:hover, #about a:focus { color: #11ABB0; }
- 
- #about h2 {
-    font: 22px/30px 'opensans-bold', sans-serif;
-    color: #fff;
-    margin-bottom: 12px;
- }
- #about p {
-   font-family: 'Times New Roman', Times, serif;
-   font-size: large;
-    line-height: 45px;
-    color: white;
- }
- #about li{
-   font-family: 'Times New Roman', Times, serif;
-   font-size: large;
-   line-height: 45px;
- }
- #about.wrapper {
-    padding: 100px;
-  }
-  
- #about.image--cover {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 100px;
-    object-fit: contain;
-    object-position: unset;
-  }
- #about .profile-pic {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
- }
- #about .contact-details {
-   width: 41.66667%;
-  padding: 10px;
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  background: #161415 url('./image/image.png') no-repeat top center;
+  background-size: cover;
+  padding: 60px 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container row */
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+  gap: 30px;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Profile image with glow */
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Main text column */
+.main-col {
   text-align: center;
-  margin: 0 auto
-      
-     }
- #about .download {
-    position:relative;
-    object-fit: scale-down;
-    width: 58.33333%;
-    padding-top: 6px;
- }
-
- /* About.css or any relevant CSS file */
-education-list {
-   font-family: 'Times New Roman', serif;
-    list-style-type: armenian; /* Removes bullet points */
-    text-align:right;
-    padding-right: 20px;
-    position: inherit;
-    margin-bottom: 50px;
 }
 
-education-list li {
-   font-family: 'Times New Roman', Times, serif;
-    margin: 10px 0; /* Adds spacing between items */
-    text-align: right;
-    padding-right: 20px;
+.main-col h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  animation: fadeInUp 1s ease-out 0.2s both;
 }
- 
- 
- 
+
+.main-col p,
+.main-col li {
+  font-size: 18px;
+  line-height: 1.6;
+  list-style: none;
+  font-family: 'Times New Roman', serif;
+  margin: 8px 0;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+/* Contact card */
+.contact-details {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .three.columns {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nine.columns.main-col {
+    flex: 3;
+    text-align: left;
+    padding-left: 30px;
+  }
+
+  .contact-details {
+    text-align: left;
+  }
+}

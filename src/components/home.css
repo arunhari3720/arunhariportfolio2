@@ -1,216 +1,100 @@
-@import url('font-awesome/css/font-awesome.min.css');
-
-body{
-    font-family: "Tangerine", cursive;
-    background: white url('./image/image.png');
-  }
-
-  
-  
- .container{
-    text-align: center;
-    width: 400px;
-    height: 320px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .fade-container{
-    background: #fe9494;
-    width: 400px;
-    height: 300px;
+/* Container for the home component */ 
+.home {
     position: relative;
-    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    transition-duration: 10ms;
-  }
-  
-  .fade-container:hover{
-    cursor: pointer;
-  }
-  
-  .fade{
-    font-family: "Tangerine", cursive;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);  
-    position: absolute;
-    text-transform: uppercase;
+    min-height: 750px;
+    width: 100%;
+    background: white url('./image/image.png') no-repeat top center;
+    background-size: cover;
+    text-align: center;
+    overflow: hidden;
+    padding: 50px 20px;
+    color: white; /* ✅ Set text color for all content inside .home */
+}
+
+/* Headline for typing effect */
+h1 {
     font-size: 2.5em;
-    color: #d54040;
-    text-align: left;
-    width: 260px;
-  }
-  
-  .bounceInDown{
-    opacity: 0;
-    -webkit-animation: bounceInDown 1s;
-    animation: bounceInDown 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  
-  .fadeInDown{
-    opacity: 0;
-    -webkit-animation: fadeInDown 1s;
-    animation: fadeInDown 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  
-  @-webkit-keyframes fadeInDown {
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-              transform: translate3d(0, -100%, 0);
-    }
-  
-    100% {
-      opacity: 1;
-      -webkit-transform: none;
-              transform: none;
-    }
-  }
-  
-  @keyframes fadeInDown {
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-              transform: translate3d(0, -100%, 0);
-    }
-  
-    100% {
-      opacity: 1;
-      -webkit-transform: none;
-              transform: none;
-    }
-  }
-  
-  @-webkit-keyframes bounceInDown {
-    0%, 60%, 75%, 90%, 100% {
-      -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-              transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    }
-  
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -3000px, 0);
-              transform: translate3d(0, -3000px, 0);
-    }
-  
-    60% {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 25px, 0);
-              transform: translate3d(0, 25px, 0);
-    }
-  
-    75% {
-      opacity: 1;
-      -webkit-transform: translate3d(0, -10px, 0);
-              transform: translate3d(0, -10px, 0);
-    }
-  
-    90% {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 5px, 0);
-              transform: translate3d(0, 5px, 0);
-    }
-  
-    100% {
-      opacity: 1;
-      -webkit-transform: none;
-              transform: none;
-    }
-  }
-  
- #home .button{
-    opacity: 0.3;
+    margin: 20px 0;
+}
+
+/* Staggered letter animation */
+.letter {
+    font: 100px "Alumni Sans SC", sans-serif;
+    font-weight: 700;
+    font-style: italic;
     display: inline-block;
-    margin: 12px 5px;
-    border: solid 1px #f26767;
-    border-radius: 10px;
-    padding: 7px 10px;
-    font-size: 0.8em;
-    font-family: 'Lato', sans-serif;
-    font-weight: 100;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  
-  #home.button, select{
-    opacity: 0.3;  
-    transition: opacity 0.15s ease-in-out;
-  }
-  
-  #home.button:hover, select:hover{
-    opacity: 1;  
-  }
-
-  /* Home.css */
-
-social-media {
-    margin-top: 20px;
-    text-align: center; /* Center align the social media section */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s forwards;
 }
 
-social-icons {
-    list-style: none; /* Remove bullets */
-    padding: 10px; /* Remove padding */
+/* Keyframes for the animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-social-icons li {
-    display: inline-block; /* Align icons horizontally */
-    margin: 0 10px; /* Spacing between icons */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-social-icons a {
-    text-decoration: none; /* Remove underline */
-    color: #000; /* Default color */
-    font-size: 24px; /* Size of icons */
-    transition: color 0.3s; /* Smooth transition for hover effect */
+/* Paragraph styling */
+.fade-in {
+    font-size: 1.2em;
+    color: white; /* Redundant now, since .home sets it, but okay to keep */
+    margin: 10px 0;
 }
 
-social-icons a:hover {
-    color: yellowgreen; /* Color change on hover */
+/* Social media links styling */
+.social-media {
+    margin: 20px 0;
 }
 
-social-icons i {
-    margin: 0; /* Ensure there's no margin */
+.social-icons {
+    list-style-type: none;
+    padding: 0;
 }
 
+.social-icons li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Button styles */
 .btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-size: 20px;
-  position: relative;
-  opacity: 10;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
+
 .btn:hover {
-  background-color: yellowgreen;
+    background-color: #0056b3;
 }
 
-h3{
-  font-family: 'Times New Roman',serif;
-  font-weight: bold;
-  font-variant: inherit;
-  font-size: larger;
-}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
 
-p{
-  font-family: "Tangerine", cursive;
-  font-variant: inherit;
-  font-weight: bold;
-  font-size: xxx-large;
-}
+    .fade-in {
+        font-size: 1em;
+    }
 
-font{
-   font-family: "Tangerine", cursive;
-  font-variant: inherit;
-  font-size: xxx-large;
-  font-weight: bold;
+    .btn {
+        width: 100%;
+        padding: 15px;
+    }
 }

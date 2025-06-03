@@ -1,54 +1,140 @@
 .chart-container {
-    display: flex;
     position: relative;
-     right: 400px;
+    width: 300px;    /* Reasonable size for the doughnut */
+    height: 300px;
+    margin: 0 auto;  /* Center horizontally */
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px; /* Adjust according to your needs */
 }
 
 .doughnut-chart {
-  
-    width: 1000px; /* Size of the doughnut */
-    height: 100px; /* Size of the doughnut */
-    border-radius: 50%; /* Make it a circle */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
     background: conic-gradient(
         #FF6384 0% var(--java-percentage),
-        #36A2EB var(--java-percentage) var(--java-percentage + var(--python-percentage)),
-        #FFCE56 var(--java-percentage + var(--python-percentage)) var(--java-percentage + var(--python-percentage) + var(--html-percentage)),
-        #4BC0C0 var(--java-percentage + var(--python-percentage) + var(--html-percentage)) var(--java-percentage + var(--python-percentage) + var(--html-percentage) + var(--css-percentage)),
-        transparent var(--java-percentage + var(--python-percentage) + var(--html-percentage) + var(--css-percentage)) 100%
+        #36A2EB var(--java-percentage) calc(var(--java-percentage) + var(--python-percentage)),
+        #FFCE56 calc(var(--java-percentage) + var(--python-percentage)) calc(var(--java-percentage) + var(--python-percentage) + var(--html-percentage)),
+        #4BC0C0 calc(var(--java-percentage) + var(--python-percentage) + var(--html-percentage)) calc(var(--java-percentage) + var(--python-percentage) + var(--html-percentage) + var(--css-percentage)),
+        transparent calc(var(--java-percentage) + var(--python-percentage) + var(--html-percentage) + var(--css-percentage)) 100%
     );
+    animation: fillChart 2s ease forwards;
+    position: relative;
 }
 
-.slice {
+@keyframes fillChart {
+    from {
+        background: conic-gradient(
+            #FF6384 0% 0%,
+            #36A2EB 0% 0%,
+            #FFCE56 0% 0%,
+            #4BC0C0 0% 0%,
+            transparent 0% 100%
+        );
+    }
+    to {
+        background: conic-gradient(
+            #FF6384 0% var(--java-percentage),
+            #36A2EB var(--java-percentage) calc(var(--java-percentage) + var(--python-percentage)),
+            #FFCE56 calc(var(--java-percentage) + var(--python-percentage)) calc(var(--java-percentage) + var(--python-percentage) + var(--html-percentage)),
+            #4BC0C0 calc(var(--java-percentage) + var(--python-percentage) + var(--html-percentage)) calc(var(--java-percentage) + var(--python-percentage) + var(--html-percentage) + var(--css-percentage)),
+            transparent calc(var(--java-percentage) + var(--python-percentage) + var(--html-percentage) + var(--css-percentage)) 100%
+        );
+    }
+}
+
+/* Optional: add a smaller white circle to create the "doughnut hole" */
+.doughnut-chart::before {
+    content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
-    clip-path: circle(50%);
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.java {
-    --java-percentage: 40%; /* Define the percentage Java takes up */
-}
-
-.python {
-    --python-percentage: 30%; /* Define the percentage Python takes up */
-}
-
-.html {
-    --html-percentage: 20%; /* Define the percentage HTML takes up */
-}
-
-.css {
-    --css-percentage: 10%; /* Define the percentage CSS takes up */
-}
-
+/* Skill label center text */
 .skill-label {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
-    color: black; /* Text color */
+    color: black;
+    font-size: 1.2em;
+    pointer-events: none;
+}
+
+/* Variables for skill percentages */
+.java {
+    --java-percentage: 40%;
+}
+
+.python {
+    --python-percentage: 30%;
+}
+
+.html {
+    --html-percentage: 20%;
+}
+
+.css {
+    --css-percentage: 10%;
+}
+
+/* Position labels around the doughnut */
+/* Customize the positions as per your design */
+
+.label-java {
+    position: absolute;
+    top: 25%;
+    left: 75%;
+    color: #FF6384;
+    font-weight: bold;
+}
+
+.label-python {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    color: #36A2EB;
+    font-weight: bold;
+}
+
+.label-html {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    color: #FFCE56;
+    font-weight: bold;
+}
+
+.label-css {
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+    color: #4BC0C0;
+    font-weight: bold;
+}
+
+/* Responsive: reduce size on small screens */
+@media (max-width: 480px) {
+    .chart-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .doughnut-chart {
+        width: 250px;
+        height: 250px;
+    }
+
+    .doughnut-chart::before {
+        width: 120px;
+        height: 120px;
+    }
 }
